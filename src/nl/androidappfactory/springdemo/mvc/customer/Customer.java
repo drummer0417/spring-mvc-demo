@@ -33,7 +33,9 @@ public class Customer {
 	private String postalCode;
 
 	// Custom validation using my own annotation CourseCode...
-	@CourseCode(value = "hvm", message = "helemaal fout")
+	final static String COURSE_CODE_PREFIX = "AAP";
+	@CourseCode(prefix = COURSE_CODE_PREFIX, message = "the Course code should start with \"" + COURSE_CODE_PREFIX
+			+ "\"")
 	private String courseCode;
 
 	public String getFirstName() {

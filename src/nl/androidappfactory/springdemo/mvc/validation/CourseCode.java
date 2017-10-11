@@ -11,11 +11,10 @@ import javax.validation.Payload;
 @Constraint(validatedBy = CourseCodeConstraintValidator.class)
 @Target({ ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
-
 public @interface CourseCode {
 
 	// define the default course code (prefix)
-	public String value() default "luv";
+	public String prefix() default "luv";
 
 	// define the default message
 	public String message() default "Course code should start with luv";

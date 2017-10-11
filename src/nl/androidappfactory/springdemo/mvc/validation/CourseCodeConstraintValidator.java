@@ -9,7 +9,7 @@ public class CourseCodeConstraintValidator implements ConstraintValidator<Course
 
 	@Override
 	public void initialize(CourseCode theCourseCode) {
-		coursePrefix = theCourseCode.value().toUpperCase();
+		coursePrefix = theCourseCode.prefix().toUpperCase();
 	}
 
 	@Override
