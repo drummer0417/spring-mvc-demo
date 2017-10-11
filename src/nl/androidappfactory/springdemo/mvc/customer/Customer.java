@@ -32,6 +32,7 @@ public class Customer {
 	@Pattern(regexp = "\\A[1-9][0-9]{3}[ ]?([A-RT-Za-rt-z][A-Za-z]|[sS][BCbcE-Re-rT-Zt-z])\\z", message = "Format should be 1234AB or 1234 AB")
 	private String postalCode;
 
+	// Custom validation using my own annotation CourseCode...
 	@CourseCode(value = "hvm", message = "helemaal fout")
 	private String courseCode;
 
